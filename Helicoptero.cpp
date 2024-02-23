@@ -30,7 +30,7 @@ string Helicoptero::GetTipo_arma() {
 	return tipo_arma;
 }
 
-int Helicoptero::GetVelocidada() {
+int Helicoptero::GetVelocidad() {
 	return Velocidad;
 }
 

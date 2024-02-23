@@ -9,7 +9,7 @@ private:
 	string tipo_arma = "";
 	//Cohete o Misil
 	int Velocidad = 0;
-	//falta info
+	//100-400
 	double Resistencia = 0;
 	/*
 	 se puede decir que es el porcentaje de vida de cada helicóptero, y su
