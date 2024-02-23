@@ -21,3 +21,7 @@ void CampoDeBatalla::MostrarInformación(){
 	}
 }
 
+void CampoDeBatalla::SimularBatalla(Helicoptero* helicoptero1, Helicoptero* helicoptero2){
+
+}
+

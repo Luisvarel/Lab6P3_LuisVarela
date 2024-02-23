@@ -127,7 +127,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CampoDeBatalla.cpp" />
+    <ClCompile Include="Helicoptero.cpp" />
+    <ClCompile Include="Helicoptero_H.cpp" />
+    <ClCompile Include="Helicoptero_IA.cpp" />
     <ClCompile Include="Lab6P3_LuisVarela.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CampoDeBatalla.h" />
+    <ClInclude Include="Helicoptero.h" />
+    <ClInclude Include="Helicoptero_H.h" />
+    <ClInclude Include="Helicoptero_IA.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
