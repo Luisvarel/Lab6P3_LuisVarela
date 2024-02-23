@@ -26,3 +26,36 @@ double Helicoptero_H::Atacar() {
 	this->SetMunicion(this->GetMunicion()-5);
 	return DTotal;
 }
+
+string Helicoptero_H::toString(){
+	string temp="";
+	temp+="Nombre: ";
+	temp += GetNombre();
+	temp += "\n";
+	temp += "Tipo de arma: ";
+	temp += GetTipo_arma();
+	temp += "\n";
+	temp += "Velocidad: ";
+	temp += GetVelocidad();
+	temp += " km/h";
+	temp += "\n";
+	temp += "Resistencia: ";
+	temp += GetResistencia();
+	temp += "\n";
+	temp += "Municion: ";
+	temp += GetMunicion();
+	temp += "\n";
+	temp += "Tipo de misil: ";
+	temp += getmisil();
+	temp += "\n";
+	return temp;
+}
+
+string Helicoptero_H::getmisil(){
+	return misil;
+}
+
+void Helicoptero_H::setmisil(string misil){
+	this->misil = misil;
+}
+

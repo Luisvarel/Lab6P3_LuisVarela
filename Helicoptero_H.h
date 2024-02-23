@@ -9,5 +9,10 @@ public:
 	~Helicoptero_H();
 	Helicoptero_H(string Nombre, string tipo_arma, int Velocidad, double Resistencia, int Municion,string misil);
 	virtual double Atacar()override;
+	virtual string toString()override;
+	//get y set de misil
+	string getmisil();
+	void setmisil(string misil);
+
 };
 

@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 #include <string>
+#include <vector>
 using namespace std;
 
 class Helicoptero {
@@ -22,7 +23,9 @@ public:
 	~Helicoptero();
 	Helicoptero();
 	Helicoptero(string Nombre, string tipo_arma, int Velocidad, double Resistencia, int Municion);
-	virtual void Atacar();
+	virtual string toString();
+	virtual double Atacar();
+
 	//get y set de Nombre
 	string GetNombre();
 	void SetNombre(string Nombre);
@@ -30,7 +33,7 @@ public:
 	string GetTipo_arma();
 	void SetTipo_arma(string tipo_arma);
 	//get y set de Velocidad
-	int GetVelocidada();
+	int GetVelocidad();
 	void SetVelocidad(int Velocidad);
 	//get y set de Resistencia
 	double GetResistencia();
