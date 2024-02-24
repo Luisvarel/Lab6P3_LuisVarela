@@ -22,6 +22,21 @@ void CampoDeBatalla::MostrarInformación(){
 }
 
 void CampoDeBatalla::SimularBatalla(Helicoptero* helicoptero1, Helicoptero* helicoptero2){
+	bool seguir = 1;
+	int turno = 1;
+	do{
+		if (helicoptero1->GetMunicion()>5 && turno % 2 != 0) {
 
+		}
+		else {
+
+		}
+		if (turno % 2 == 0 && helicoptero2->GetMunicion()) {
+
+		}else {
+
+		}
+		turno++;
+	} while (seguir);
 }
 

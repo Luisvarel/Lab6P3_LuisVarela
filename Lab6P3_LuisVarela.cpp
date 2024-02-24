@@ -105,8 +105,8 @@ void MostrarInfo(CampoDeBatalla* nuevo) {
 	nuevo->MostrarInformación();
 }
 
-void Simular() {
-
+void Simular(CampoDeBatalla* nuevo) {
+	nuevo->SimularBatalla();
 }
 
 void menu() {
@@ -129,7 +129,7 @@ void menu() {
 			break;
 		}
 		case 3: {
-			Simular();
+			Simular(nuevo);
 			break;
 		}
 		case 4: {
