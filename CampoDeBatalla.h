@@ -1,5 +1,7 @@
 #pragma once
 #include "Helicoptero.h"
+#include "Helicoptero_H.h"
+#include "Helicoptero_IA.h"
 
 using namespace std;
 class CampoDeBatalla{
