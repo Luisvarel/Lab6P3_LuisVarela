@@ -23,8 +23,8 @@ public:
 	~Helicoptero();
 	Helicoptero();
 	Helicoptero(string Nombre, string tipo_arma, int Velocidad, double Resistencia, int Municion);
-	virtual string toString();
-	virtual double Atacar();
+	virtual string toString()=0;
+	virtual double Atacar()=0;
 
 	//get y set de Nombre
 	string GetNombre();

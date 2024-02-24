@@ -11,8 +11,8 @@ public:
 	CampoDeBatalla();
 	~CampoDeBatalla();
 	//get y set de miVector
-	void AgregarHelicóptero(Helicoptero*nuevo);
-	void MostrarInformación();
+	void AgregarHelicoptero(Helicoptero*nuevo);
+	void MostrarInformacion();
 	int tam();
 	void SimularBatalla(int num1, int num2);
 };

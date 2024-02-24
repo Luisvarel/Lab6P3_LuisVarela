@@ -2,8 +2,8 @@
 #include "Helicoptero_H.h"
 #include "Helicoptero_IA.h"
 #include "CampoDeBatalla.h"
-
-void Agregar(CampoDeBatalla* nuevo) {
+CampoDeBatalla* nuevo = new CampoDeBatalla();
+void Agregar() {
 	int opcion = 0;
 	string nombre = "", Tipo_arma = "";
 	int  Velocidad = 0, Resistencia = 0, Municion = 0;
@@ -16,16 +16,16 @@ void Agregar(CampoDeBatalla* nuevo) {
 	do {
 		cout << "Ingrese nombre: ";
 		cin >> nombre;
-	} while (nombre.size() != 0);
+	} while (nombre.size() == 0);
 	//pido Velocidad
 	do {
 		cout << "Ingrese la velocidad: ";
 		cin >> Velocidad;
 		if (Velocidad <= 99) {
-			cout << "Velocidad no puede ser menor a 100";
+			cout << "Velocidad no puede ser menor a 100" << endl;
 		}
 		else if (Velocidad >= 401) {
-			cout << "Velocidad no puede ser mayor a 400";
+			cout << "Velocidad no puede ser mayor a 400" << endl;
 		}
 	} while (Velocidad <= 99 || Velocidad >= 401);
 	//pido Resistencia
@@ -33,10 +33,10 @@ void Agregar(CampoDeBatalla* nuevo) {
 		cout << "Ingrese la resistencia: ";
 		cin >> Resistencia;
 		if (Resistencia <= 99) {
-			cout << "Resistencia no puede ser menor a 100";
+			cout << "Resistencia no puede ser menor a 100" << endl;
 		}
 		else if (Resistencia >= 201) {
-			cout << "Resistencia no puede ser mayor a 200";
+			cout << "Resistencia no puede ser mayor a 200" << endl;
 		}
 	} while (Resistencia <= 99 || Resistencia >= 201);
 	//pido Munición
@@ -44,10 +44,10 @@ void Agregar(CampoDeBatalla* nuevo) {
 		cout << "Ingrese la Munición: ";
 		cin >> Municion;
 		if (Municion <= 99) {
-			cout << "Municion no puede ser menor a 5";
+			cout << "Municion no puede ser menor a 5"<<endl;
 		}
 		else if (Municion >= 201) {
-			cout << "Municion no puede ser mayor a 30";
+			cout << "Municion no puede ser mayor a 30" << endl;
 		}
 	} while (Municion <= 4 || Municion >= 31);
 	//switch
@@ -58,9 +58,9 @@ void Agregar(CampoDeBatalla* nuevo) {
 		int temp = 0;
 		//pido tipo de misil
 		do {
-			cout << "1.Anti-bombas: ";
-			cout << "2.Fulminante: ";
-			cout << "3.Reforzado: ";
+			cout << "1.Anti-bombas: " << endl;
+			cout << "2.Fulminante: " << endl;
+			cout << "3.Reforzado: " << endl;
 			cin >> temp;
 		} while (temp <= 0 || temp >= 4);
 		if (temp == 1) {
@@ -72,7 +72,7 @@ void Agregar(CampoDeBatalla* nuevo) {
 		else if (temp == 3) {
 			tipo_misil = "Reforzado";
 		}
-		nuevo->AgregarHelicóptero(new Helicoptero_H(nombre, Tipo_arma, Velocidad, Resistencia, Municion, tipo_misil));
+		nuevo->AgregarHelicoptero(new Helicoptero_H(nombre, Tipo_arma, Velocidad, Resistencia, Municion, tipo_misil));
 		break;
 	}
 	case 2: {
@@ -81,9 +81,9 @@ void Agregar(CampoDeBatalla* nuevo) {
 		//pido la inteligencia
 		int temp = 0;
 		do {
-			cout << "1.Principiante: ";
-			cout << "2.Intermedio: ";
-			cout << "3.Avanzado: ";
+			cout << "1.Principiante: " << endl;
+			cout << "2.Intermedio: " << endl;
+			cout << "3.Avanzado: " << endl;
 			cin >> temp;
 		} while (temp <= 0 || temp >= 4);
 		if (temp == 1) {
@@ -95,17 +95,17 @@ void Agregar(CampoDeBatalla* nuevo) {
 		else if (temp == 3) {
 			Inteligencia_cohete = "Avanzado";
 		}
-		nuevo->AgregarHelicóptero(new Helicoptero_IA(nombre, Tipo_arma, Velocidad, Resistencia, Municion, Inteligencia_cohete));
+		nuevo->AgregarHelicoptero(new Helicoptero_IA(nombre, Tipo_arma, Velocidad, Resistencia, Municion, Inteligencia_cohete));
 		break;
 	}
 	}
 }
 
-void MostrarInfo(CampoDeBatalla* nuevo) {
-	nuevo->MostrarInformación();
+void MostrarInfo() {
+	nuevo->MostrarInformacion();
 }
 
-void Simular(CampoDeBatalla* nuevo) {
+void Simular() {
 	int size = nuevo->tam();
 	int num1 = 0;
 	int num2 = 0;
@@ -121,26 +121,25 @@ void Simular(CampoDeBatalla* nuevo) {
 }
 
 void menu() {
-	CampoDeBatalla* nuevo = new CampoDeBatalla();
 	bool seguir = 1;
 	do {
 		cout << "1.Agregar Helicopteros" << endl;
-		cout << "2.Mostrar información de helicópteros" << endl;
+		cout << "2.Mostrar informacion de helicopteros" << endl;
 		cout << "3.Simular Batalla" << endl;
 		cout << "4.Salir" << endl;
 		int opcion = 0;
 		cin >> opcion;
 		switch (opcion) {
 		case 1: {
-			Agregar(nuevo);
+			Agregar();
 			break;
 		}
 		case 2: {
-			MostrarInfo(nuevo);
+			MostrarInfo();
 			break;
 		}
 		case 3: {
-			Simular(nuevo);
+			Simular();
 			break;
 		}
 		case 4: {

@@ -10,11 +10,11 @@ CampoDeBatalla::~CampoDeBatalla() {
 
 }
 
-void CampoDeBatalla::AgregarHelicóptero(Helicoptero* nuevo) {
+void CampoDeBatalla::AgregarHelicoptero(Helicoptero* nuevo) {
 	miVector.push_back(nuevo);
 }
 
-void CampoDeBatalla::MostrarInformación() {
+void CampoDeBatalla::MostrarInformacion() {
 	for (Helicoptero* miHelicoptero : miVector) {
 		cout << miHelicoptero->toString();
 	}
