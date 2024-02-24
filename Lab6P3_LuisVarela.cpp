@@ -106,7 +106,18 @@ void MostrarInfo(CampoDeBatalla* nuevo) {
 }
 
 void Simular(CampoDeBatalla* nuevo) {
-	nuevo->SimularBatalla();
+	int size = nuevo->tam();
+	int num1 = 0;
+	int num2 = 0;
+	do{
+		cout << "Seleccione el primer helicoptero para batalla:";
+		cin >> num1;
+	} while (num1 <= size);
+	do {
+		cout << "Seleccione el segundo helicoptero para batalla:";
+		cin >> num2;
+	} while (num2 <= size);
+	nuevo->SimularBatalla(num1, num2);
 }
 
 void menu() {

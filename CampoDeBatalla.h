@@ -13,6 +13,7 @@ public:
 	//get y set de miVector
 	void AgregarHelicóptero(Helicoptero*nuevo);
 	void MostrarInformación();
-	void SimularBatalla(Helicoptero* helicoptero1, Helicoptero* helicoptero2);
+	int tam();
+	void SimularBatalla(int num1, int num2);
 };
 
